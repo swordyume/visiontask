@@ -20,8 +20,8 @@ public:
     [[nodiscard]] uint16_t GetLastTime() const { return last_time_; }
 
 private:
-    std::vector<std::shared_ptr<BaseRobot> > good_robots;
-    std::vector<std::shared_ptr<BaseRobot> > bad_robots;
+    std::vector<std::shared_ptr<BaseRobot> > good_robots_;
+    std::vector<std::shared_ptr<BaseRobot> > bad_robots_;
     std::vector<std::string> output_;
 
     uint16_t last_time_;

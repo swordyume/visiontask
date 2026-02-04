@@ -6,18 +6,16 @@
 #define REFEREE_SYSTEM_ENGINEERROBOT_H
 #include "baserobot.h"
 
-#include <cstdint>
-
 class EngineerRobot : public BaseRobot {
 public:
     EngineerRobot(uint16_t team, uint16_t id) : BaseRobot(team, id, 1) {
         max_blood_ = 300;
         max_heat_ = 0;
-        ResetBlood();
-        ResetHeat();
+        reset_blood();
+        reset_heat();
     };
 
-    bool SetLevel(uint8_t level) override { return false; };
+    bool set_level(uint8_t level) override { return false; };
 };
 
 

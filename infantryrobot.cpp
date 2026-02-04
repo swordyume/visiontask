@@ -4,7 +4,7 @@
 
 #include "infantryrobot.h"
 
-bool InfantryRobot::SetLevel(uint8_t level) {
+bool InfantryRobot::set_level(uint8_t level) {
     if (level < 1 || level > 3 || level <= level_) {
         return false;
     }
@@ -26,8 +26,8 @@ bool InfantryRobot::SetLevel(uint8_t level) {
 
     level_ = level;
 
-    ResetBlood();
-    ResetHeat();
+    reset_blood();
+    reset_heat();
 
     return true;
 }

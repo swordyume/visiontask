@@ -16,20 +16,20 @@ public:
 
     virtual ~BaseRobot() =default;
 
-    virtual bool SetLevel(uint8_t level)=0;
+    virtual bool set_level(uint8_t level)=0;
 
-    [[nodiscard]] uint16_t GetTeam() const { return team_; }
-    [[nodiscard]] uint16_t GetId() const { return id_; }
-    [[nodiscard]] uint8_t GetType() const { return type_; }
-    [[nodiscard]] uint16_t GetBlood() const { return blood_; }
-    [[nodiscard]] uint16_t GetHeat() const { return heat_; }
-    [[nodiscard]] uint16_t GetMaxBlood() const { return max_blood_; }
-    [[nodiscard]] uint16_t GetMaxHeat() const { return max_heat_; }
+    [[nodiscard]] uint16_t get_team() const { return team_; }
+    [[nodiscard]] uint16_t get_id() const { return id_; }
+    [[nodiscard]] uint8_t get_type() const { return type_; }
+    [[nodiscard]] uint16_t get_blood() const { return blood_; }
+    [[nodiscard]] uint16_t get_heat() const { return heat_; }
+    [[nodiscard]] uint16_t get_max_blood() const { return max_blood_; }
+    [[nodiscard]] uint16_t get_max_heat() const { return max_heat_; }
 
-    void SetBlood(uint16_t blood) { blood_ = blood; }
-    void SetHeat(uint16_t heat) { heat_ = heat; }
-    void ResetBlood() { blood_ = max_blood_ ; }
-    void ResetHeat() { heat_ = 0 ; }
+    void set_blood(uint16_t blood) { blood_ = blood; }
+    void set_heat(uint16_t heat) { heat_ = heat; }
+    void reset_blood() { blood_ = max_blood_ ; }
+    void reset_heat() { heat_ = 0 ; }
 
 
 protected:

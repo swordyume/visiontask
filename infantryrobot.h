@@ -14,12 +14,12 @@ public:
         max_heat_ = 100;
         level_ = 1;
 
-        ResetBlood();
-        ResetHeat();
+        reset_blood();
+        reset_heat();
     }
 
-    bool SetLevel(uint8_t level) override;
-    [[nodiscard]]uint8_t GetLevel() const {return level_;}
+    bool set_level(uint8_t level) override;
+    [[nodiscard]]uint8_t get_level() const {return level_;}
 
 private:
     uint8_t level_;
